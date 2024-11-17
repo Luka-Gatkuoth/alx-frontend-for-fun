@@ -1,0 +1,51 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #8a153a;
+  position: relative;
+}
+
+/* a::after {
+  content: " ";
+  position: absolute;
+  text-decoration: none;
+  background-color: ;
+  height: 3px;
+  transform: translateY(2.2ex);
+  transition: 0.5s ease-out;
+  transform-origin: left;
+}
+a:hover ::after {
+  width: 9.5ch;
+} */
+
+/* 1-styles.css */
+
+a {
+  text-decoration: none; /* Hide the underline by default */
+  /* Positioning context for the pseudo-element */
+}
+
+a::after {
+  content: ""; /* Create a pseudo-element */
+  display: block; /* Make it a block element */
+  height: 2px; /* Thickness of the underline */
+  background: #8a153a; /* Color of the underline */
+  position: absolute; /* Position it absolutely */
+  left: 0; /* Align to the left */
+  bottom: 0; /* Align to the bottom */
+  width: 100%; /* Full width */
+  transform: scaleX(0); /* Start hidden */
+  transition: transform 0.3s ease; /* Transition effect */
+}
+
+a:hover::after {
+  transform: scaleX(1); /* Show the underline on hover */
+}
